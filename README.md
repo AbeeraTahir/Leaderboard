@@ -1,5 +1,5 @@
-# Webpack-Setup
-This repository is created to build a boilerplate for webpack.
+# Leaderboard
+This website displays scores of the game of different people
 ## Built With
 
 - HTML
@@ -8,7 +8,7 @@ This repository is created to build a boilerplate for webpack.
 
 ## Getting Started
 
-> To clone the project select the desired directory in cmd and run: `git clone https://github.com/AbeeraTahir/Webpack-Setup.git`
+> To clone the project select the desired directory in cmd and run: `git clone https://github.com/AbeeraTahir/Leaderboard.git`
 
 ### Prerequisites
 
