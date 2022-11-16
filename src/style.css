@@ -25,7 +25,8 @@ main {
 }
 
 .recent-scores,
-.add-scores {
+.add-scores,
+form {
   display: flex;
   flex-direction: column;
   gap: 20px;
