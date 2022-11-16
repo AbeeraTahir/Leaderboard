@@ -8,12 +8,29 @@ This website displays scores of the game of different people
 
 ## Getting Started
 
-> To clone the project select the desired directory in cmd and run: `git clone https://github.com/AbeeraTahir/Leaderboard.git`
-
 ### Prerequisites
 
   - Git
   - GitHub
+  - Node.js
+
+### Setup
+
+To get a local copy, follow the steps below:
+
+  1. Open your terminal.
+  2. Navigate to the directory where you want to clone the project.
+  3. Run: `git clone https://github.com/AbeeraTahir/Leaderboard.git`
+  4. Open your editor and follow the steps mentioned below:
+
+### Install
+
+- `npm install`
+
+### Usage
+
+- `npm run build`
+- `npm start`
 
 ## Author
 
