@@ -29,7 +29,6 @@ btnSubmit.addEventListener('click', async (e) => {
   const playerName = nameEl.value;
   const playerScore = scoreEl.value;
   await api.addScore(playerName, playerScore);
-  displayScores();
   nameEl.value = '';
   scoreEl.value = '';
 });
