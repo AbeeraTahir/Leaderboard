@@ -1,16 +1,15 @@
 import './style.css';
-import API from './modules/API.js';
+import { addScore, getScores } from './modules/game-api.js';
 
 const nameEl = document.getElementById('your-name');
 const scoreEl = document.getElementById('your-score');
 const btnReferesh = document.querySelector('.btn-refresh');
 const btnSubmit = document.querySelector('.btn-submit-score');
 const scoresList = document.querySelector('.scores-info');
-const api = new API();
 
 // display scores
 const displayScores = async () => {
-  const scoresArray = await api.getScores();
+  const scoresArray = await getScores();
   let scoresData = '';
   const sortedScores = scoresArray.result.sort((a, b) => b.score - a.score);
   sortedScores.forEach((item) => {
@@ -19,7 +18,7 @@ const displayScores = async () => {
   scoresList.innerHTML = scoresData;
 };
 
-// refresh button
+// refresh buttonS
 btnReferesh.addEventListener('click', async () => {
   displayScores();
 });
@@ -28,7 +27,7 @@ btnSubmit.addEventListener('click', async (e) => {
   e.preventDefault();
   const playerName = nameEl.value;
   const playerScore = scoreEl.value;
-  await api.addScore(playerName, playerScore);
+  await addScore(playerName, playerScore);
   nameEl.value = '';
   scoreEl.value = '';
 });
