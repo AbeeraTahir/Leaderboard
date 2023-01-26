@@ -1,25 +1,15 @@
+import addScore from './modules/addScore.js';
+import displayScores from './modules/displayScores.js';
 import './style.css';
-import { addScore, getScores } from './modules/game-api.js';
 
 const nameEl = document.getElementById('your-name');
 const scoreEl = document.getElementById('your-score');
 const btnReferesh = document.querySelector('.btn-refresh');
 const btnSubmit = document.querySelector('.btn-submit-score');
-const scoresList = document.querySelector('.scores-info');
-
-// display scores
-const displayScores = async () => {
-  const scoresArray = await getScores();
-  let scoresData = '';
-  const sortedScores = scoresArray.result.sort((a, b) => b.score - a.score);
-  sortedScores.forEach((item) => {
-    scoresData += `<li>${item.user}: ${item.score}</li>`;
-  });
-  scoresList.innerHTML = scoresData;
-};
 
 // refresh buttonS
-btnReferesh.addEventListener('click', async () => {
+btnReferesh.addEventListener('click', async (e) => {
+  e.preventDefault();
   displayScores();
 });
 
