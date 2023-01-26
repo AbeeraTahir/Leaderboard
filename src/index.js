@@ -2,8 +2,8 @@ import addScore from './modules/addScore.js';
 import displayScores from './modules/displayScores.js';
 import './style.css';
 
-const nameEl = document.getElementById('your-name');
-const scoreEl = document.getElementById('your-score');
+const nameElement = document.getElementById('your-name');
+const scoreElement = document.getElementById('your-score');
 const btnReferesh = document.querySelector('.btn-refresh');
 const btnSubmit = document.querySelector('.btn-submit-score');
 
@@ -15,11 +15,11 @@ btnReferesh.addEventListener('click', async (e) => {
 
 btnSubmit.addEventListener('click', async (e) => {
   e.preventDefault();
-  const playerName = nameEl.value;
-  const playerScore = scoreEl.value;
+  const playerName = nameElement.value;
+  const playerScore = scoreElement.value;
   await addScore(playerName, playerScore);
-  nameEl.value = '';
-  scoreEl.value = '';
+  nameElement.value = '';
+  scoreElement.value = '';
 });
 
 document.addEventListener('DOMContentLoaded', displayScores);
