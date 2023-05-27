@@ -46,7 +46,7 @@ form {
 .scores-header {
   display: flex;
   align-items: center;
-  gap: 130px;
+  justify-content: space-between;
 }
 
 .scores-header h2,
@@ -77,6 +77,8 @@ button {
   margin: 10px 0;
   background-color: #ccc;
   border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 input {
@@ -89,4 +91,34 @@ input {
   width: 70px;
   margin-right: 0;
   margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  header h1 {
+    text-align: center;
+  }
+
+  main {
+    width: 80%;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .add-scores {
+    width: 100%;
+  }
+
+  .scores-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-refresh {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .add-scores h2 {
+    text-align: center;
+  }
 }
